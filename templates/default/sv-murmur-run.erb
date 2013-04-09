@@ -1,0 +1,3 @@
+#!/bin/sh
+exec 2>&1
+exec chpst -u <%= node[:murmur][:user] %>:<%= node[:murmur][:group] %> murmurd -ini <%= ::File.join(node[:murmur][:config_dir], "murmur.ini") %> -fg -v

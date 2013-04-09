@@ -1,0 +1,7 @@
+<% @config.each do |name, values| %>
+  <% values[:comment].each_line do |comment_line| %>
+# <%= comment_line.strip %>
+  <% end %>
+<%= "#" if values[:value].nil? %><%= name %>=<%= values[:value] %>
+
+<% end %>
