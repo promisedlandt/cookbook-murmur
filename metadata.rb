@@ -4,7 +4,7 @@ maintainer_email "cookbooks@promisedlandt.de"
 license          "MIT"
 description      "Installs Murmur, the official Mumble server"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "0.1.1"
+version          "0.1.2"
 
 %w(apt runit).each { |dep| depends dep }
 

@@ -1,6 +1,8 @@
 <% @config.each do |name, values| %>
-  <% values[:comment].each_line do |comment_line| %>
+  <% if values[:comment] and values[:comment].length > 0 %>
+    <% values[:comment].each_line do |comment_line| %>
 # <%= comment_line.strip %>
+    <% end %>
   <% end %>
 <%= "#" if values[:value].nil? %><%= name %>=<%= values[:value] %>
 
